@@ -22,15 +22,20 @@ grails.project.dependency.resolution = {
 	}
 
 	dependencies {
+		compile "net.sf.ehcache:ehcache-core:2.4.6"
 	}
 
 	plugins {
-		build ':tomcat:7.0.47'
-		compile ':scaffolding:2.0.1'
-		runtime ":jquery:1.10.2"
-		runtime ":resources:1.2.1"
-
-		runtime ":mongodb:1.3.1"
+		build ":tomcat:7.0.52.1"
+		
+		compile ":scaffolding:2.0.3"
+    compile ':cache:1.1.2'
+		
+    runtime ":jquery:1.11.0.2"
+    runtime ":resources:1.2.7"
+		runtime ":database-migration:1.4.0"
+		
+		runtime ":mongodb:3.0.0"
 		compile ':spring-security-core:2.0-RC2'
 	}
 }
