@@ -1,3 +1,5 @@
+grails.app.context="/mongoBlog"
+
 grails.config.locations = [
 	"classpath:${appName}-config.groovy",
 	"file:./${appName}-config.groovy"]
