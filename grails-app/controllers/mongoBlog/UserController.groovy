@@ -12,7 +12,7 @@ class UserController {
 		
 	}
 	
-	def create(String username, ) {
+	def create(String username) {
 		
 	}
 	

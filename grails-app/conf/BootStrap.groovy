@@ -13,5 +13,4 @@ class BootStrap {
 		def testUser1 = new User(username: 'example', password: 'password', email: 'example@email.com', authorities: [roleDummy]).save(flush:true)
 		
 	}
-	
 }

@@ -13,24 +13,30 @@ class RegistrationController {
 	 * @param: form fields
 	 */
 	def create(String username, String email, String encodedPassword) {
-		if (!(userExists(username) || emailExists(email)) {
-			newUser = new User(username: username, email: email, password: encodedPassword, authorities: ['ROLE_USER']).save(flush:true)
+		if (!(userExists(username) || emailExists(email))) {
+			newUser = new User(username: params.username, email: params.email, password: params.encodedPassword, authorities: ['ROLE_USER']).save(flush:true)
 		}
 	}
 	
-	def userExists(String username): boolean {
+	/*
+	 * returns boolean
+	 */
+	def userExists(String username) {
 		// perform search of database for username
 	}
 	
-	def emailExists(String email): boolean {
+	/*
+	 * returns boolean
+	 */
+	def emailExists(String email) {
 		// perform search of database for email
 	}
 	
 	/*
-	def passwordComplex(): boolean {
+	 * also returns boolean
+	 */
+	def passwordComplex() {
 		// check if meets certain conditions for password complexity
 	}
-	*/
-	
 	
 }
